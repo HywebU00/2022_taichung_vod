@@ -1,0 +1,71 @@
+.thumbnail {
+    .col{
+        box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
+        background: #FFF;
+        width: 100%;
+        border-radius: 3px;
+        overflow: hidden;
+        transition: all .3s ease;
+        &:hover{
+            box-shadow: 0 12px 3em -1em rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            display: block;
+            @include aSetting(#555);
+            position:relative;
+            &:focus {
+                &:before{
+                    content:"";
+                    position:absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    z-index: 1;
+                    box-shadow:0px 0px 0px 1px $aHover inset;
+                }
+            }
+        }
+        .img-container {
+            @include aspect-ratio(4, 3);
+        }
+        h2, h3, h4 {
+            margin: .2em 0;
+        }
+        .caption {
+            margin: 0 auto;
+            padding: 1.25em 1.75em;
+
+            .title{
+                // @include text-line(2,28px); 
+                line-height: 1.2;
+                padding-top: 12px;
+
+                position: relative;
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 90px;
+                    height: 3px;
+                    background: #666;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            time{}
+            p{ margin: .25em 0; }
+        }
+        .btn_grp {
+            padding: .45em 0 0;
+            @extend %clearfix;
+        }
+        hr {
+            width: 90%;
+            margin: .1em auto 1em;
+        }
+    }
+}

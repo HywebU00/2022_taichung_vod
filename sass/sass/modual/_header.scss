@@ -1,0 +1,434 @@
+$mobile_header_height:60px;
+
+//header
+.header {
+    position: relative;
+    z-index: 99;
+    // background: #FFF;
+    // box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
+    @extend %clearfix;
+
+    @include screen('tablet') {
+        position: fixed;
+        width: 100%;
+        height: $mobile_header_height;
+        box-shadow: 0 2px 5px RGBA(0, 0, 0, .3);
+    }
+
+    dfn{ display: block; }
+
+    // 虛擬底色 - navigation bg
+    // &:before {
+    //     content: "";
+    //     width: 100%;
+    //     height: 2.4em;
+    //     background: #F2F2F2;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     @include screen('mobile') {
+    //         display: none;
+    //     }
+    // }
+
+    // mobile btn for extend
+    %mobileCtrlBtn {
+        width: 60px !important;
+        height: 60px !important;
+        position: absolute;
+        top: 0px;
+        display: block;
+        font-size: 0em;
+        padding: 15px;
+        margin: 0;
+        min-width: auto;
+        min-height: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        box-sizing: border-box;
+        @include screen('tablet') {
+            display: block !important;
+            z-index: 102;
+        }
+    }
+    >.container {
+        max-width: $container-max;
+        overflow: visible;
+        position: relative; // menu
+        .sidebarCtrl {
+            display: none;
+            left: 0px;
+            @extend %mobileCtrlBtn;
+            span {
+                position: absolute;
+                background: $primaryColor;
+                width: 50%;
+                height: 3px;
+                top: 20px;
+                left: 50%;
+                margin-left: -25%;
+                display: block;
+                &:nth-child(2) {
+                    top: 28px;
+                }
+                &:nth-child(3) {
+                    top: 36px;
+                }
+            }
+        }
+        // search
+        .searchCtrl {
+            display: none;
+            right: 0px;
+            font-size: 0em;
+            @extend %mobileCtrlBtn;
+            &:before {
+                width: 40px;
+                height: 40px;
+                background: url(../images/basic/icon_search.png) no-repeat center center;
+                background-size: 28px;
+                opacity: .6;
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: block;
+            }
+        }
+    }
+    h1 {
+        // display: inline-block;
+        width: 300px;
+        height: 100px;
+        
+        position: absolute;
+        z-index: 100;
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+        background: #fff;
+        a {
+            // display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+        img {
+            // display: block;
+            max-width: 300px;
+            max-height: 60px;
+        }
+        @include screen('tablet') {
+            padding: 2px 60px;
+            width: 100%;
+            text-align: center;
+            height: $mobile_header_height;
+
+            a{ height: $mobile_header_height; }
+            img {
+                width: auto;
+                height: auto;
+                max-height: 54px;
+                margin: 0px auto;
+                transform: scale(.8);
+            }
+        }
+    }
+    // 導覽列
+    .navigation {
+
+        @include screen('tablet') {
+            display: none;
+        }
+        &.have_language {
+            padding-right: 160px;
+        }
+        @extend %clearfix;
+        overflow: hidden;
+        // width: 100%;
+        // margin-bottom: .5em;
+        box-sizing:border-box;
+        // display: flex;
+        
+        position: absolute;
+        right: 72px;
+        top: 0;
+
+        //shuya 1090826
+        .navlist{
+            flex:1 1 auto;
+            // margin: .1em .5em 0 0;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                font-size: .875em;
+                list-style: none;
+                display: flex;
+                justify-content: flex-end;
+            }
+            li {
+                flex:0 0 auto;
+                max-width: 140px;
+
+                a {
+                    display: block;
+                    padding: 1.1em .5em;
+                    padding-right: 40px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    line-height: 1.45;
+                    height: 72px;
+                    @include aSetting_nocolor;
+
+                    dfn{ color: #bbb; }
+                }
+            }
+        }
+
+        .language {
+            position: absolute;
+            right: 15px;
+            top: .35em;
+            font-size: .75em;
+        }
+    }
+}
+//search
+.search {
+    // display: flex;
+    // justify-content: flex-end;
+    // flex-wrap:wrap;
+    // vertical-align: top;
+    // font-size: .938em;
+    // margin: 1em .5em;
+    // box-sizing: border-box;
+
+    position: relative;
+    z-index: 100;
+    float: right;
+
+    @include screen('tablet') {
+        display: none;
+    }
+
+    label { font-size: 0em; }
+
+    .form_grp{
+        position: absolute;
+        // top: 74px;
+        // right: 0;
+        top: 0;
+        right: 74px;
+        background: rgba(0,0,0,.85);
+        width: 420px;
+        padding: 1em;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        // box-shadow: rgba(255, 255, 255, .75) 0px 13px 27px -5px;
+    }
+
+    // 桌機版 search 開啟按鈕
+    .PC_searchCtrl{
+        font-size: 0;
+        width: 72px;
+        height: 72px;
+        background: #000;
+        border: 0 !important;
+        &:before {
+            content: "";
+            width: 72px;
+            height: 72px;
+            background: url(../images/icon/icon_search2.svg) no-repeat center center;
+            background-size: 16px 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -36px;
+            display: block;
+        }
+
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+
+
+    .form_grp {
+        // flex:0 0 auto;
+        // margin:0;
+
+        display: none;  // 預設關閉
+
+        input {
+            margin: 0;
+            box-shadow: none;
+            width:auto;
+            border-radius: .2em;
+
+            &[type="text"] {
+                width: 260px;
+                // padding: .5em 3em .5em .75em;
+                padding: .5em .75em;
+            }
+            &[type="submit"] {
+                min-width: auto;
+                padding: .5em 2.6em;
+            }
+            &:focus{
+                box-shadow: 0 0px 0px 2px $aFocus;
+            }
+        }
+    }
+    .btn_grp {
+        flex:0 0 auto;
+        padding:0 .5em 0;
+        margin: 0;
+        input, input[type="submit"] {
+            min-width: auto;
+            padding: .2em .8em;
+            margin: 0;
+        }
+    }
+    // .keywordHot {
+    //     flex:1 1 100%;
+    //     ul {
+    //         font-size: .813em;
+    //         line-height: 1.65em;
+    //         margin: 0;
+    //         padding: 0;
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         list-style-type: none;
+    //         &:before {
+    //         }
+    //         li {
+    //             margin: 0;
+    //             padding: .5em;
+    //             flex:0 0 auto;
+    //         }
+    //         a {
+    //             @include aSetting_nocolor;
+    //         }
+    //     }
+    // }
+
+    // m_search
+    &.m_search {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto;
+        padding: .8em .3em;
+        display: block;
+        height: auto;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 98;
+        background: #333;
+        display: none;
+        margin: 0;
+
+        label {
+            font-size: 0em;
+            line-height: 0;
+        }
+        .form_grp {
+            display: flex;
+
+            label {
+                display: none;
+                flex:0 0 0%;
+            }
+            input {
+                margin: .5em;
+                padding: .5em;
+                flex:1 1 80%;
+
+                &[type="submit"] {
+                    flex:0 1 20%;
+                    margin: .5em;
+
+                    &:hover, &:focus {
+                    }
+                }
+            }
+
+            position: static;
+            margin: auto;
+            width: 95%;
+            background: transparent;
+        }
+        .btn_grp {
+            flex:1 1 auto;
+            padding:.5em;
+            margin-top: .5em;
+            border-top: dotted 1px #999;
+
+            box-sizing: border-box;
+            input {
+                width: 100% !important;
+                padding: .6em .5em !important;
+                margin: 0;
+            }
+        }
+        // .keywordHot {
+        //     @extend %clearfix;
+        //     ul{
+        //         justify-content:flex-start;
+        //     }
+        //     a {
+        //         color: #FFF;
+        //         &:hover,
+        //         &:focus {
+        //             color: $primaryColor;
+        //         }
+        //     }
+        // }
+    }
+}
+
+// header fix
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+    // background: rgba(0, 0, 0, .75);
+    background: $lightColor;
+    z-index: 999;
+    @include screen('tablet') {
+        background: #FFF;
+    }
+    .menu {
+        // >ul {
+        //     >li {
+        //         >a {
+        //             color: #FFF;
+        //         }
+        //     }
+        // }
+
+        // 隱藏 hero 背景 2
+        padding-bottom: 0;
+        background: none;
+
+        // 隱藏 hero 背景 1
+        &:before{
+            background: transparent;
+        }
+    }
+    .megamenu {
+        >ul {
+            >li {
+                >a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
