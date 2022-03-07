@@ -79,4 +79,16 @@
 
 .notice{
     padding-left: 0;
+
+    &.alert{
+        // font-size: 112.5%;
+        padding: 1.25em 2em;
+        margin: 0 0 1em;
+        color: #fff;
+        background: #831866;
+        p{
+            margin: 0;
+            line-height: 1.6;
+        }
+    }
 }

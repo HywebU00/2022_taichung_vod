@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2022台中視界網</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header class="header"></header>
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <div class="container">
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                            <li>節點</li>
+                        </ul>
+                    </div>
+                    <!-- h2節點 -->
+                    <h2 class="main_title"><span>節點標題<dfn>English title</dfn></span></h2>
+                    <!-- function_panel -->
+                    <div class="function_panel">
+                        <!-- <div class="publish_time">
+                            <span>發布日期：</span><time>2019-01-01</time>
+                        </div> -->
+                        <!-- 文字大小 -->
+                        <div class="font_size">
+                            <span>字型大小：</span>
+                            <!-- 英文用<span>font-size：</span> -->
+                            <ul>
+                                <li><a href="#" class="small">小</a></li>
+                                <li><a href="#" class="medium">中</a></li>
+                                <li><a href="#" class="large">大</a></li>
+                            </ul>
+                        </div>
+                        <!-- function功能區塊 -->
+                        <div class="function">
+                            <ul>
+                                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                                <li class="print"><a href="#">友善列印</a></li>
+                                <li class="forward"><a href="#">轉寄友人</a></li>
+                            </ul>
+                        </div>
+                        <!-- 社群分享 -->
+                        <div class="share">
+                            <ul>
+                                <li><a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_line.svg" alt="line"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a></li>
+                                <li><a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk"></a></li>
+                            </ul>
+                        </div>
+                        <!-- 連結 -->
+                        <!-- <div class="btn_grp">
+                            <a href="#" class="btn btn-normal"><i class="i_search2"></i>歷史資料查詢</a>
+                            <a href="#" class="btn btn-normal"><i class="i_search2"></i>條件查詢</a>
+                        </div> -->
+                    </div>
+                    <!-- function功能區塊 -->
+                    <!-- <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div> -->
+                    <!-- QP Start -->
+                    <section class="qp">
+                        <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
+                        <form action="">
+                            <div class="form_grid flex-form">
+                                <div class="form_grp">
+                                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>input：</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" placeholder="請輸入文字">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>select：</label>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="">台北市</option>
+                                            <option value="">新北市</option>
+                                            <option value="">桃園市</option>
+                                            <option value="">新竹市</option>
+                                            <option value="">...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>起始日期(type="date")</div>
+                                    <div class="form_content">
+                                        <div class="datepick">
+                                            <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                        </div>
+                                        <div class="datepick">
+                                            <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的真實姓名：</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡電話：</label>
+                                    <div class="form_content">
+                                        <input name="" id="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的電子信箱：</label>
+                                    <div class="form_content">
+                                        <input name="" id="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>意見類別：</label>
+                                    <div class="form_content">
+                                        <div class="radio_grp form_inline">
+                                            <label>
+                                                <input type="radio" name="sampleRadio5" value="" checked="">類別1</label>
+                                            <label>
+                                                <input type="radio" name="sampleRadio5" value="">類別2</label>
+                                            <label>
+                                                <input type="radio" name="sampleRadio5" value="">類別3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>意見類別：</label>
+                                    <div class="form_content">
+                                        <div class="check_grp form_inline">
+                                            <label>
+                                                <input type="checkbox" name="" value="" checked="">類別1</label>
+                                            <label>
+                                                <input type="checkbox" name="" value="">類別2</label>
+                                            <label>
+                                                <input type="checkbox" name="" value="">類別3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>內容：</label>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="70"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>意見類別：</label>
+                                    <div class="form_content form_inline">
+                                        <select id="selectSample" name="">
+                                            <option value="">類別1</option>
+                                            <option value="">類別2</option>
+                                            <option value="">類別3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗證碼：</label>
+                                    <div class="form_content">
+                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                        <input type="text" id="" value="">
+                                    </div>
+                                </div>
+                                <div class="btn_grp form_inline">
+                                    <input name="" type="reset" value="清除" class="btn btn-reset">
+                                    <input name="Search" type="submit" value="送出" class="btn btn-submit">
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- QP End -->
+                </div>
+            </div>
+        </div>
+        <!-- footer load footer.htm-->
+        <footer></footer>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+
+    <script>
+        // first example
+        $('header').load("header.htm");
+        $('footer').load("footer.htm");
+    </script>
+</body>
+
+</html>

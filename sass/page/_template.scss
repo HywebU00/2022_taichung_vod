@@ -74,15 +74,29 @@ body {
             }
         }
     }
+
+    .sub_title{
+        font-size: 136%;
+        color: $secondaryColor;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: solid 4px $secondaryColor;
+    }
+
+    .coming{
+        max-width: 720px;
+        margin: auto;
+        @include aspect-ratio(16, 9);
+    }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     >.container {
-        // @include gutter(); //gutter 代表左右要留白
+        @include gutter(5em); //gutter 代表左右要留白
         padding-top: 2em;
-        padding-left: 3em;
-        padding-right: 1.5em;
+        padding-bottom: 2em;
+
         display: flex;
 
         box-shadow: rgba(0, 0, 0, 0.08) -500px -25px 100px -20px,

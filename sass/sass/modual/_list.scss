@@ -3,6 +3,11 @@
         td {
             a {
                 @include aSetting_nocolor;
+                text-decoration: underline !important;
+
+                &:hover, &:focus{
+                    text-decoration: none !important;
+                }
             }
             &.date {
                 text-align: center;
