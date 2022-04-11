@@ -608,16 +608,19 @@ $(function() {
                 // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 tabItemWidth = 320;
 
-                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                // _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 // _tabItem.first().css('margin-left', 0);
                 // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
-                _tabItem.first().css('margin-left', 'calc(50% - 320px)');
-                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 'calc(50% - 320px)'  }).width(tabItemWidth);
+                _tabItem.width(tabItemWidth);
+                _tabItem.first().css('margin-left', 'calc(50% - 324px)');
+                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 'calc(50% - 324px)' }).width(tabItemWidth);
 
             } else {
                 _tab.css('height', 'auto');
                 _tabItem.width(tabwidth);
-                _tabItem.css('margin-left', 0).last().css('position', 'relative');
+                // _tabItem.css('margin-left', 0).last().css('position', 'relative');
+                _tabItem.first().css('margin-left', 0);
+                _tabItem.last().css({'position': 'relative','right': 0 })
             }
             _tabItem.focus(tabs); //改button後，前面改_tabItem
             _tabItem.click(tabs); //改button後，前面改_tabItem
