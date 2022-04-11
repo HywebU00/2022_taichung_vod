@@ -611,8 +611,8 @@ $(function() {
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 // _tabItem.first().css('margin-left', 0);
                 // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
-                _tabItem.first().css('margin-left', 'calc(50.25% - 320px)');
-                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 'calc(50.25% - 320px)'  }).width(tabItemWidth);
+                _tabItem.first().css('margin-left', 'calc(50% - 320px)');
+                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 'calc(50% - 320px)'  }).width(tabItemWidth);
 
             } else {
                 _tab.css('height', 'auto');
