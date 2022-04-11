@@ -7,22 +7,22 @@ $(function() {
     });
 
     // 首頁輪播
-    $('.mpSlider').slick({
-        mobileFirst: true,
-        dots: true,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        fade: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        customPaging: function(slider, i) {
-            var title = $(slider.$slides[i]).find('img').attr('alt').trim();
-            return $('<button type="button" aria-label="' + title + '"/>').text(title);
-        }
-    });
+    // $('.mpSlider').slick({
+    //     mobileFirst: true,
+    //     dots: true,
+    //     arrows: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     autoplay: true,
+    //     fade: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     customPaging: function(slider, i) {
+    //         var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+    //         return $('<button type="button" aria-label="' + title + '"/>').text(title);
+    //     }
+    // });
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,
@@ -39,21 +39,21 @@ $(function() {
         responsive: [{
             breakpoint: 1200,
             settings: {
-                slidesToShow: 5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true
             }
         }, {
             breakpoint: 768,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: true
             }
         }, {
             breakpoint: 575,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
