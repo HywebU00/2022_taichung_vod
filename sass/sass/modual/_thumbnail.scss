@@ -36,30 +36,30 @@
         h2, h3, h4 {
             margin: .2em 0;
         }
-        .caption {
-            margin: 0 auto;
-            padding: 1.25em 1.75em;
+        // .caption {
+        //     margin: 0 auto;
+        //     padding: 1.25em 1.75em;
 
-            .title{
-                // @include text-line(2,28px); 
-                line-height: 1.2;
-                padding-top: 12px;
+        //     .title{
+        //         // @include text-line(2,28px); 
+        //         line-height: 1.2;
+        //         padding-top: 12px;
 
-                position: relative;
-                &:before{
-                    content: '';
-                    display: block;
-                    width: 90px;
-                    height: 3px;
-                    background: #666;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            }
-            time{}
-            p{ margin: .25em 0; }
-        }
+        //         position: relative;
+        //         &:before{
+        //             content: '';
+        //             display: block;
+        //             width: 90px;
+        //             height: 3px;
+        //             background: #666;
+        //             position: absolute;
+        //             top: 0;
+        //             left: 0;
+        //         }
+        //     }
+        //     time{}
+        //     p{ margin: .25em 0; }
+        // }
         .btn_grp {
             padding: .45em 0 0;
             @extend %clearfix;
@@ -77,4 +77,30 @@
             @include aspect-ratio(4, 3);  //相片
         }
     }
+}
+
+// 拉出來共用
+.caption {
+    margin: 0 auto;
+    padding: 1.25em 1.75em;
+
+    .title{
+        // @include text-line(2,28px); 
+        line-height: 1.2;
+        padding-top: 12px;
+
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            width: 90px;
+            height: 3px;
+            background: #666;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    time{}
+    p{ margin: .25em 0; }
 }

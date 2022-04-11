@@ -1,4 +1,5 @@
-$mobile_header_height:60px;
+$mobile_header_height: 95px;
+$x_mobile_header_height: 60px;
 
 //header
 .header {
@@ -13,6 +14,9 @@ $mobile_header_height:60px;
         width: 100%;
         height: $mobile_header_height;
         box-shadow: 0 2px 5px RGBA(0, 0, 0, .3);
+    }
+    @include screen('xs_mobile') {
+        height: $x_mobile_header_height;
     }
 
     dfn{ display: block; }
@@ -33,8 +37,9 @@ $mobile_header_height:60px;
 
     // mobile btn for extend
     %mobileCtrlBtn {
-        width: 60px !important;
-        height: 60px !important;
+        width: 95px !important;
+        height: 95px !important;
+        background: #222 !important;
         position: absolute;
         top: 0px;
         display: block;
@@ -47,53 +52,106 @@ $mobile_header_height:60px;
         border: none;
         box-shadow: none;
         box-sizing: border-box;
+
         @include screen('tablet') {
             display: block !important;
             z-index: 102;
         }
+
+        @include screen('xs_mobile') {
+            width: 60px !important;
+            height: 60px !important;
+        }
     }
+
     >.container {
         max-width: $container-max;
         overflow: visible;
         position: relative; // menu
         .sidebarCtrl {
             display: none;
-            left: 0px;
+            // left: 0px;
+            right: 0;
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
-                background: $primaryColor;
-                width: 50%;
-                height: 3px;
-                top: 20px;
+                background: #fff;
+                width: 30%;
+                height: 2px;
+                top: 40px;
                 left: 50%;
-                margin-left: -25%;
+                // margin-left: -15%;
+                margin-left: -24%;
                 display: block;
                 &:nth-child(2) {
-                    top: 28px;
+                    top: 47px;
                 }
                 &:nth-child(3) {
-                    top: 36px;
+                    top: 54px;
+                    width: 18%;
+                    // margin-left: -3%;
+                    margin-left: -12%;
                 }
             }
         }
         // search
         .searchCtrl {
             display: none;
-            right: 0px;
+            right: 95px;
             font-size: 0em;
             @extend %mobileCtrlBtn;
             &:before {
-                width: 40px;
-                height: 40px;
-                background: url(../images/basic/icon_search.png) no-repeat center center;
-                background-size: 28px;
-                opacity: .6;
                 content: "";
+
+                width: 36px;
+                height: 36px;
+                background: url(../images/icon/icon_search2.svg) no-repeat center center;
+                background-size: 26px 26px;
+                filter: invert(100%);
+                // opacity: .6;
+                
                 position: absolute;
-                top: 10px;
-                left: 10px;
+                top: 50%;
+                left: 50%;
+                margin-top: -18px;
+                margin-left: -12px;
                 display: block;
+            }
+
+            // btn 中間線
+            &:after{
+                content: "";
+
+                position: absolute;
+                width: 2px;
+                height: 24px;
+                background: #fff;
+                right: 0;
+                top: 50%;
+                margin-top: -12px;
+            }
+        }
+
+        @include screen('xs_mobile') {
+            .sidebarCtrl {
+                span {
+                    width: 40%;
+                    top: 31px;
+                    margin-left: -20%;
+                    &:nth-child(2) { top: 25px; }
+                    &:nth-child(3) { top: 37px; }
+                }
+            }
+            // search
+            .searchCtrl {
+                right: 60px;
+                &:before {
+                    background-size: 22px 22px;
+                    // width: 32px;
+                    // height: 32px;
+                    // margin-top: -16px;
+                    // margin-left: -16px;
+                }
             }
         }
     }
@@ -123,19 +181,37 @@ $mobile_header_height:60px;
             max-height: 60px;
         }
         @include screen('tablet') {
-            padding: 2px 60px;
+            // padding: 2px 60px;
+            padding-right: 190px;
             width: 100%;
             text-align: center;
             height: $mobile_header_height;
 
-            a{ height: $mobile_header_height; }
+            a{
+                height: $mobile_header_height;
+                justify-content: flex-start;
+                padding-left: 1em;
+            }
             img {
                 width: auto;
                 height: auto;
-                max-height: 54px;
-                margin: 0px auto;
-                transform: scale(.8);
+                max-width: 180px;
+                // max-height: 54px;
+                // margin: 0px auto;
+                // transform: scale(.8);
             }
+        }
+
+        @include screen('mobile') {}
+
+        @include screen('xs_mobile') {
+            height: $x_mobile_header_height;
+            a{
+                // justify-content: end;
+                padding-left: 0;
+                height: $x_mobile_header_height;
+            }
+            img { transform: scale(.8); }
         }
     }
     // 導覽列
@@ -157,6 +233,8 @@ $mobile_header_height:60px;
         position: absolute;
         right: 72px;
         top: 0;
+        width: 100%;
+        background: #fff; // 遮蔽左側背景
 
         //shuya 1090826
         .navlist{
@@ -180,8 +258,8 @@ $mobile_header_height:60px;
                     padding: 1.1em .5em;
                     padding-right: 40px;
                     text-decoration: none;
-                    font-weight: bold;
-                    line-height: 1.45;
+                    // font-weight: bold;
+                    line-height: 1.35;
                     height: 72px;
                     @include aSetting_nocolor;
 
@@ -243,12 +321,20 @@ $mobile_header_height:60px;
             width: 72px;
             height: 72px;
             background: url(../images/icon/icon_search2.svg) no-repeat center center;
-            background-size: 16px 16px;
+            background-size: 22px 22px;
             position: absolute;
             top: 50%;
             left: 50%;
             margin: -36px;
             display: block;
+            filter: invert(100%);
+        }
+
+        &:focus, &:hover{
+            background: $secondaryColor;
+            // &:before{
+            //     filter: invert(0%);
+            // }
         }
 
         @include screen('tablet') {
@@ -325,12 +411,16 @@ $mobile_header_height:60px;
         display: block;
         height: auto;
         position: fixed;
-        top: 60px;
+        top: $mobile_header_height;  // xs_mobile 變成 $x_mobile_header_height
         left: 0;
-        z-index: 98;
+        z-index: 100;
         background: #333;
         display: none;
         margin: 0;
+
+        @include screen('xs_mobile') {
+            top: $x_mobile_header_height;
+        }
 
         label {
             font-size: 0em;
@@ -423,12 +513,31 @@ $mobile_header_height:60px;
         }
     }
     .megamenu {
-        >ul {
-            >li {
-                >a {
-                    color: #FFF;
+        // >ul {
+        //     >li {
+        //         >a {
+        //             color: #FFF;
+        //         }
+        //     }
+        // }
+
+        ul {
+            li {
+                ul{
+                    margin-left: 0;
+                    width: 100%;
                 }
             }
+        }
+
+
+        // 隱藏 hero 背景 2
+        padding-bottom: 0;
+        background: none;
+
+        // 隱藏 hero 背景 1
+        &:before{
+            background: transparent;
         }
     }
 }

@@ -26,8 +26,75 @@
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
-        <!-- header load header.htm -->
-        <header class="header"></header>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <!-- <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a> -->
+
+                <h1><a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a></h1>
+
+                <!-- Search -->
+                <div class="search" role="search">
+                    <button class="btn PC_searchCtrl">展開搜尋欄位</button>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">搜尋</label>
+                        <input name="" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容">
+                        <input name="" type="submit" value="查詢" class="btn btn-search" />
+                    </div>
+                </div>
+
+                <!-- navigation -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">首頁<dfn>home</dfn></a></li>
+                            <li><a href="#">關於本網站<dfn>About us </dfn></a></li>
+                            <li><a href="#">網站地圖<dfn>Sitemap </dfn></a></li>
+                            <li><a href="#">政府網站資料開放宣導</a></li>
+                            <li><a href="#">公開資料平台<dfn>Open Data</dfn></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+
+                <!-- menu -->
+                <nav class="megamenu" role="navigation" aria-label="About page">
+                    <!-- <p class="slogen"><span>Taichung City<br>Government</span></p> -->
+                    <p class="slogen">Taichung City Government</p>
+                    <ul>
+                        <li><a href="#">市政會議直播<dfn>Live meeting</dfn></a>
+                            <ul>
+                                <li><a href="#">第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">第二層選單<dfn>English</dfn></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">影音總覽<dfn>Vodeo Platform</dfn></a>
+                            <ul>
+                                <li><a href="#">1第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">2第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">3第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">4第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">5第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">6第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">7第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">8第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">9第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">10第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">12第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">13第二層選單<dfn>English</dfn></a></li>
+                                <li><a href="#">14第二層選單<dfn>English</dfn></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <!-- main Start -->
         <div id="center" class="main innerpage">
             <!-- 內頁新增一個classname-->
@@ -50,26 +117,45 @@
                         <div class="publish_time">
                             <span>發布日期：</span><time>2019-01-01</time>
                         </div>
-                        <!-- 文字大小 -->
-                        <div class="font_size">
-                            <span>字型大小：</span>
-                            <!-- 英文用<span>font-size：</span> -->
-                            <ul>
-                                <li><a href="#" class="small">小</a></li>
-                                <li><a href="#" class="medium">中</a></li>
-                                <li><a href="#" class="large">大</a></li>
-                            </ul>
-                        </div>
                         <!-- function功能區塊 -->
                         <div class="function">
                             <ul>
                                 <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                                 <li class="print"><a href="#">友善列印</a></li>
                                 <li class="forward"><a href="#">轉寄友人</a></li>
+                                <li class="share">
+                                    <ul>
+                                        <li><a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_line.svg" alt="line"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a></li>
+                                        <li><a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk"></a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
+                        <!-- 連結 -->
+                        <div class="btn_grp">
+                            <a href="#" class="btn btn-function"><i class="i_search2"></i>歷史資料查詢</a>
+                            <a href="#" class="btn btn-function"><i class="i_search2"></i>條件查詢</a>
+                        </div>
+                        <!-- 文字大小 -->
+                        <div class="font_size">
+                            <!-- <span>字型大小：</span> -->
+                            <!-- 英文用<span>font-size：</span> -->
+                            <ul>
+                                <li><a href="#" class="small">A</a></li>
+                                <li><a href="#" class="medium">A</a></li>
+                                <li><a href="#" class="large">A</a></li>
+                            </ul>
+                        </div>
+                        
                         <!-- 社群分享 -->
-                        <div class="share">
+                        <!-- <div class="share">
                             <ul>
                                 <li><a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a></li>
                                 <li><a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a></li>
@@ -81,12 +167,7 @@
                                 <li><a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a></li>
                                 <li><a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk"></a></li>
                             </ul>
-                        </div>
-                        <!-- 連結 -->
-                        <div class="btn_grp">
-                            <a href="#" class="btn btn-normal"><i class="i_search2"></i>歷史資料查詢</a>
-                            <a href="#" class="btn btn-normal"><i class="i_search2"></i>條件查詢</a>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- 警告文字 -->
@@ -242,7 +323,7 @@
                         </table>
 
                         <!-- fanybox cppic_slider lightbox_slider-->
-                         <div class="lightbox_slider_block">
+                        <div class="lightbox_slider_block">
                             <h3 >燈箱照片</h3>
                             <div class="cppic_slider">
                                 <div class="img-container">
@@ -330,8 +411,33 @@
                 </div>
             </div>
         </div>
-        <!-- footer load footer.htm-->
-        <footer></footer>
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <!-- <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a> -->
+                <div class="footer_info">
+                    <!-- 台中市徽 -->
+                    <div class="footer_logo">
+                        <img src="images/TJ_logo.svg" alt="" class="img-responsive">
+                        <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+                    </div>
+                    <p>07610 臺中市西屯區臺灣大道三段99號  電話：04-22289111．行動代表號：0910-289111 <br>
+                    本網站為臺中市政府版權所有 請尊重智慧財產權，未經允許請勿任意轉載、複製或做商業用途</p>
+                    <p class="Copyright">Copyrightc 2022 Taichung City Government</p>
+                    <p>No.99,Sec.3,Taiwan Boulevard,Xitun Dist, Taichung City 07610,Taiwan (R.O.C.)<br>
+                    Tel: 886-4-22289111 Phone: 886-910-289111</p>
+                    <p>Microsoft Edge、Firefox、Chrome(螢幕設定最佳顯示效果為1280*1024)</p>
+                </div>
+                <div class="footer_icon">
+                    <!-- <a target="_blank" href="javascript:;" title="另開視窗">
+                        <img src="images/basic/accessibility.jpg" alt="">
+                    </a> -->
+                    <a target="_blank" href="javascript:;" title="另開視窗">
+                        <img src="images/basic/egov.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
@@ -349,10 +455,4 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
-
-    <script>
-        // first example
-        $('header').load("header.htm");
-        $('footer').load("footer.htm");
-    </script>
 </body>

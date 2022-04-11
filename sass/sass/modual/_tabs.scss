@@ -1,7 +1,7 @@
 .tabSet {
     max-width: 100%;
     margin: 1em auto;
-    overflow: hidden;
+    // overflow: hidden;
     @extend %clearfix;
     @include screen('mobile') {
         width: auto;
@@ -66,9 +66,14 @@
         text-decoration: none;
         @include text-overflow;
         box-sizing: border-box;
+
+        dfn{ display: block; }
+
         &:hover, &:focus {
-            background: $primaryColor;
+            background: $secondaryColor;
+            color: #fff;
         }
+
         @include screen('mobile') {
             float: none;
             width: 100% !important;
@@ -79,6 +84,10 @@
         }
     }
 }
+
+
+
+
 //多組 可設定差異
 .example-2 {
     .tabItem:hover {
@@ -88,6 +97,119 @@
         background: $secondaryColor;
     }
 }
+
+.topViews{
+    // height: 600px;
+    .tabItem{
+        background-color: #ddd;
+        color: #222;
+        padding: 20px 0;
+        border-radius: 0;
+        font-size: 112.5%;
+        line-height: 1.6;
+        border: 0;
+
+        dfn{
+            font-weight: normal;
+            font-size: 90%;
+        }
+
+        &.active {
+            background-color: $lightColor !important;
+            color: #222;
+        }
+
+        // 硬改呵呵
+        // width: 320px;
+        // float: none;
+        // position: absolute;
+        // &.weekly{
+        //     // 週
+        //     right: 50.25%;
+        // }
+        // &.monthly{
+        //     // 月
+        //     left: 50.25%;
+        // }
+
+        @include screen('mobile'){
+            // &.weekly,
+            // &.monthly{
+            //     position: inherit;
+            //     right: 0;
+            //     left: 0;
+            // }
+        }
+    }
+    .tabContent{
+        // top: 100px;
+        >ul{
+            li{
+                border-top: 1px #CCC solid;
+                border-bottom: none;
+                &:last-child{
+                    border-bottom: 1px #CCC solid;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 0;
+
+                    color: #666;
+
+                    position: relative;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 80px;
+                        height: 4px;
+                        background: $lightColor;
+                        left: calc(120px / 2 - 40px);
+                        top: -1px;
+                    }
+
+                    .col{
+                        &:first-child{
+                            // top number
+                            flex: 0 0 120px;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        flex: 1 1 auto;
+                        flex-basis: calc(100% - 120px);
+                        max-width: calc(100% - 120px);
+
+                        p{
+                            margin: 2px 0;
+                            font-weight: bold;
+                            color: #000;
+                        }
+                        span{}
+                    }
+                }
+            }
+        }
+    }
+
+    .more{
+        text-align: center;
+        padding-top: 30px;
+        a{
+            font-size: 125%;
+            letter-spacing: 1px;
+            padding: 25px 45px;
+            color: #fff;
+            background: #d42a4b;
+            display: inline-block;
+            border-radius: 3px;
+        }
+    }
+}
+
+
+
+
 // 顯示content
 .active+.tabContent {
     display: block;
@@ -98,16 +220,19 @@
     left: 0;
     right: 0;
     clear: both;
-    padding: 30px 20px;
+    padding: 30px 20px 0;
     display: none;
+
     @include screen('mobile') {
         position: static;
+        padding: 30px 20px;
     }
+
     ul {
         @include li-reset;
     }
     li {
-        margin: 0 0 1.3em 0;
+        // margin: 0 0 1.3em 0;
         padding: 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;

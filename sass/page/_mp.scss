@@ -53,6 +53,7 @@ a.more {
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
+
     &:hover,
     &:focus,
     &.active {
@@ -83,31 +84,50 @@ a.more {
 }
 // 廣告輪播
 .adSlider {
-    @include gutter(70px);
+    @include gutter(120px);
     margin-bottom: 20px;
+
     @include screen('mobile') {
         @include gutter();
     }
+
+    .slick-dots {
+        bottom: -42px;
+        li{
+            // margin: 0 6px;
+            width: 12px;
+            height: 12px;
+            &.slick-active{
+                button{
+                    width: 12px;
+                    height: 12px;
+                    &:before {
+                        background: #222;
+                    }
+                }
+            }
+        }
+    }
+
     .slick-prev {
-        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+        background: url(../vendor/slick/icon_arrow_left_thin.png) no-repeat center center;
         background-size: 80%;
-        left: -15px;
+        left: 15px;
     }
     .slick-next {
-        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+        background: url(../vendor/slick/icon_arrow_right_thin.png) no-repeat center center;
         background-size: 80%;
-        right: -15px;
+        right: 15px;
     }
     .img-container {
         width: 165px;
         height: 55px;
-        margin: 0px 15px;
+        // margin: 0px 15px;
+        margin: 0 auto;
         a {
             display: block;
             text-align: center;
-            img {
-                margin: 0 auto;
-            }
+            img { margin: 0 auto; }
         }
         &:focus {
             &:before {
@@ -124,4 +144,176 @@ a.more {
             }
         }
     }
+
+    a{
+        padding: 2px;
+        .caption{
+            display: block;
+            font-size: 87.5%;
+            padding: 10px 1.8em;
+            line-height: 1.5 !important;
+            color: #535353;
+            @include text-line(2,26px);
+        }
+    }
 }
+
+.mp{
+    // 左側背景設定
+    max-width: 1200px;
+    background: url(../images/img-hero-2_mp.jpg) left top no-repeat;
+    background-size: 420px auto;
+    background-attachment: fixed;
+    .menu,
+    .megamenu {
+        .slogen{
+            width: 531px;
+            height: 322px;
+            top: 80px;
+            right: 104px;
+            left: auto;
+            background: url(../images/slogen_mp.png) 50% 50% no-repeat;
+        }
+
+        // hero 背景 2：光料
+        background: none;
+
+        // hero 背景 1：建築
+        padding-top: 440px;  // 515 - 76
+        &:before{
+            background: url(../images/img-hero-1A_mp.jpg) right -2px bottom 0 no-repeat;
+            height: 515px;
+        }
+
+        @include screen('tablet') {
+            margin-top: 0;
+            padding-top: 95px;
+        }
+
+        @include screen('xs_mobile') {
+            padding-top: 60px;
+        }
+    }
+
+    .main{
+        padding-left: 5.1em;
+        .container{
+            // padding: 1.25em 3em 4em;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        .main_title{
+            text-shadow: 0 0 30px #fff, 2px 0 30px #fff, 0 2px 30px #fff,
+                         0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff,
+                         0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff;
+        }
+    }
+
+    .caption{
+        padding: 0 1.75em;
+        .title{
+            font-size: 125%;
+            line-height: 32px;
+            &:before { display: none; }
+        }
+        p{}
+        time{}
+
+        ul{
+            @include li-reset;
+            &.video_info{}
+        }
+    }
+
+    // mp 第一欄
+    .fixMT{
+        margin-top: -30px;  // 修正 menu 的 marging-bottom = 30
+        div{
+            .caption{
+                .title{
+                    padding: 0;
+                    margin-top: 0;
+                    &:before { display: none; }
+                }
+            }
+        }
+    }
+    // 底圖背景
+    .bgset{
+        .container{
+            background: url(../images/bg-content.png) right top no-repeat, #fff;
+            // padding: 1.25em 3em 4em;
+            padding: 2em 3em;
+        }
+    }
+    // 兩欄 YT
+    .mp_col-2_video{
+        .container{
+            background: rgba(255,255,255,1);
+        }
+        .embed-container { overflow: visible; }
+        .caption{
+            position: absolute;
+            background: #f7f8f8;
+            display: block;
+            width: 90%;
+            left: 50%;
+            margin-left: -45%;
+            bottom: -80px;
+
+            // 標題上方線條
+            &:before{
+                content: '';
+                display: block;
+                width: 90px;
+                height: 3px;
+                background: #666;
+                position: absolute;
+                top: 2em;
+                left: 1.75em;
+            }
+
+            padding: 2em 1.75em 1.25em;
+            .title{
+                padding-top: 0;
+                @include text-line(2,32px);
+            }
+
+            opacity: 1;
+            z-index: 1;
+            transition: all 300ms ease-in;
+        }
+        .col{
+            @include gutter(6em);
+            padding-bottom: 80px;   //for caption bottom: -60px;
+
+            &:hover{
+                .caption{
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    // AD slider
+    .AD_bgset{
+        background: #eee;
+        padding: 0 5em 4em;
+        margin-left: -5.1em;
+    }
+
+    @include screen('tablet'){
+        .main{
+            padding-left: 1.5em;
+        }
+    }
+}
+
+
+
+
+
+
+

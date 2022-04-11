@@ -78,12 +78,13 @@ kbd{
             a {
                 display: block;
                 text-align: center;
-                line-height: 32px;
                 border-radius: 50%;
-                background: #F1F1F1;
-                width: 32px;
-                height: 32px;
+                background: transparent;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
                 color: #333;
+                font-weight: bold;
                 &:hover, &:focus {
                     background: $aHover;
                     color: #FFF;
@@ -96,8 +97,8 @@ kbd{
                         color: #FFF;
                     }
                 }
-                &.small { font-size: .938em; }
-                &.large { font-size: 1.125em; }
+                &.small { font-size: .813em; }
+                &.large { font-size: 1.25em; }
             }
         }
     }

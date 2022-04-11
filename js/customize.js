@@ -26,12 +26,12 @@ $(function() {
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',

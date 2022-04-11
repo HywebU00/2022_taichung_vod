@@ -1,7 +1,7 @@
 // 按鈕設定
 $btn-font-color:$btn-word;
 $btn-border:darken($btn-font-color, 5);
-$btn-padding:.5em 1.25em;
+$btn-padding:.5em 1em;
 $btn-radius:.2em;
 // 按鈕外框
 .btn_grp {
@@ -140,22 +140,43 @@ $btn-radius:.2em;
     &:hover,
     &:focus {
         // color: darken($primaryColor, 30)!important;
-        color: #fff!important;
-        background: #970a6a!important;
-        border: solid 1px #ddd!important;
+        // color: #fff!important;
+        background: #e0e0e0!important;
+        border: solid 1px #acacac !important;
     }
 }
 // 一般按鈕
 .btn-normal{
-    background: darken(#aeaeae, 20)!important;
+    background: #666 !important;
     color: #fff !important;
-    border: solid 1px #919191!important;
-    text-shadow: none!important;
+    border: solid 1px transparent !important;
+    text-shadow: none !important;
+
+    transition: all 300ms ease-in;
+    &:hover,
+    &:focus{
+        color: #fff !important;
+        background: darken(#666, 30) !important;
+        border: solid 1px #222 !important;
+    }
+}
+
+// 一般按鈕
+.btn-function{
+    background: transparent !important;
+    color: #222 !important;
+    border: solid 1px transparent !important;
+    text-shadow: none !important;
+
+    transition: all 300ms ease-in;
     &:hover,
     &:focus{
         // color: darken(#65656E, 15)!important;
-        background: darken(#aeaeae, 40)!important;
-        border: solid 1px #222!important;
+        color: #fff !important;
+        background: darken(#aeaeae, 40) !important;
+        border: solid 1px #222 !important;
+
+        i:before{ filter: invert(100%); }
     }
 }
 
