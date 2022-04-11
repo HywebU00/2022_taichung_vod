@@ -113,11 +113,17 @@ a.more {
         background: url(../vendor/slick/icon_arrow_left_thin.png) no-repeat center center;
         background-size: 80%;
         left: 15px;
+        @include screen('mobile'){
+            left: -20px;
+        }
     }
     .slick-next {
         background: url(../vendor/slick/icon_arrow_right_thin.png) no-repeat center center;
         background-size: 80%;
         right: 15px;
+        @include screen('mobile'){
+            right: -20px;
+        }
     }
     .img-container {
         width: 165px;
@@ -224,6 +230,10 @@ a.more {
             @include li-reset;
             &.video_info{}
         }
+
+        @include screen('mobile'){
+            padding: 1.75em 0 0;
+        }
     }
 
     // mp 第一欄
@@ -238,6 +248,10 @@ a.more {
                 }
             }
         }
+
+        @include screen('tablet'){
+            margin-top: 0;
+        } 
     }
     // 底圖背景
     .bgset{
@@ -306,7 +320,11 @@ a.more {
 
     @include screen('tablet'){
         .main{
-            padding-left: 1.5em;
+            padding-left: 0;
+        }
+
+        .AD_bgset{
+            margin-left: 0;
         }
     }
 }

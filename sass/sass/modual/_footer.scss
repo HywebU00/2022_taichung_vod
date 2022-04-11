@@ -3,7 +3,7 @@ footer {
     @include clearfix;
     text-align: left;
     font-size: 0.813em;
-    padding: 1em 0;
+    padding: 2.75em 0;
     color: #fff;
     background: #000;
 
@@ -33,9 +33,11 @@ footer {
     }
     .footer_icon {
         flex:0 1 200px;
+        text-align: right;
+
         @include screen('tablet') {
            flex:1 1 100%; 
-           text-align: right;
+           text-align: left;
         }
     }
     // 版權連結
