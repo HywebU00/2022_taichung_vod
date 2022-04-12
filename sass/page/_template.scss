@@ -9,6 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    background: #313131;
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -119,6 +120,8 @@ body {
         box-shadow: rgba(0, 0, 0, 0.08) -500px -25px 100px -20px,
                     rgba(0, 0, 0, 0.08) 500px 50px 100px -20px;
 
+        background: #fff;
+
         // 裝飾背景
         position: relative;
         &:before{
@@ -130,7 +133,7 @@ body {
             position: absolute;
             right: 0;
             top: -30px;
-            z-index: -1;
+            // z-index: -1;
         }
 
         @include screen('xs_mobile'){
@@ -141,6 +144,8 @@ body {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
+
+        position: relative; // 將文字內容覆蓋於 裝飾背景
     }
     // .left_block {
     //     flex: none;

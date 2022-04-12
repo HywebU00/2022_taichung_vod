@@ -258,7 +258,7 @@
         display: block;
         background: url(../images/img-hero-1A.jpg) right -2px bottom 0 no-repeat;
         position: absolute;
-        top: 0;
+        top: 1px; // 主圖底下有空隙，往下推
         right: 0;
         width: 100%;
         height: 316px;

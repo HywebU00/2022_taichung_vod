@@ -168,7 +168,8 @@ a.more {
     // 左側背景設定
     max-width: 1200px;
     background: url(../images/img-hero-2_mp.jpg) left top no-repeat;
-    background-size: 420px auto;
+    background-size: 620px auto;
+    // background-size: 460px auto;
     background-attachment: fixed;
     .menu,
     .megamenu {
@@ -198,6 +199,24 @@ a.more {
 
         @include screen('xs_mobile') {
             padding-top: 60px;
+        }
+    }
+
+    // 手機版 hero
+    .mobile_hero{
+        display: none;
+        background: url(../images/img-hero-1A_mp.jpg) 50% 50% no-repeat;
+        padding: 5em 0;
+        .slogen{
+            width: 450px;
+            height: 270px;
+            margin: auto;
+            background: url(../images/slogen_mp.png) 50% 50% no-repeat;
+            background-size: contain;
+        }
+
+        @include screen('tablet') {
+            display: block;
         }
     }
 
@@ -236,6 +255,17 @@ a.more {
         }
     }
 
+    // header
+    .header {
+        >.container {
+            background: none;
+        }
+        .navigation{
+            width: calc(100% - 72px);
+            background: #fff; // 遮蔽左側背景
+        }
+    }
+
     // mp 第一欄
     .fixMT{
         margin-top: -30px;  // 修正 menu 的 marging-bottom = 30
@@ -263,8 +293,20 @@ a.more {
     }
     // 兩欄 YT
     .mp_col-2_video{
+        // position: relative;
+        // &:after{
+        //     content: '';
+        //     width: 900px;
+        //     height: 100%;
+        //     position: absolute;
+        //     background: #fff;
+        //     top: 0;
+        //     right: 0;
+        //     z-index: -1;
+        // }
         .container{
             background: rgba(255,255,255,1);
+            // background: rgba(255,255,255,0);
         }
         .embed-container { overflow: visible; }
         .caption{

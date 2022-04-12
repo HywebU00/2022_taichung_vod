@@ -68,6 +68,7 @@ $x_mobile_header_height: 60px;
         max-width: $container-max;
         overflow: visible;
         position: relative; // menu
+        background: #fff;
         .sidebarCtrl {
             display: none;
             // left: 0px;
@@ -233,8 +234,9 @@ $x_mobile_header_height: 60px;
         position: absolute;
         right: 72px;
         top: 0;
-        width: 100%;
-        background: #fff; // 遮蔽左側背景
+        // width: 100%;
+        // width: calc(100% - 72px);
+        // background: #fff; // 遮蔽左側背景
 
         //shuya 1090826
         .navlist{
@@ -491,6 +493,7 @@ $x_mobile_header_height: 60px;
     // background: rgba(0, 0, 0, .75);
     background: $lightColor;
     z-index: 999;
+
     @include screen('tablet') {
         background: #FFF;
     }
@@ -530,7 +533,6 @@ $x_mobile_header_height: 60px;
             }
         }
 
-
         // 隱藏 hero 背景 2
         padding-bottom: 0;
         background: none;
@@ -539,5 +541,9 @@ $x_mobile_header_height: 60px;
         &:before{
             background: transparent;
         }
+    }
+
+    >.container{
+        background: none;
     }
 }
