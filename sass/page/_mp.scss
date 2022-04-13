@@ -218,6 +218,11 @@ a.more {
         @include screen('tablet') {
             display: block;
         }
+        @include screen('xs_mobile') {
+            .slogen{
+                width: calc(100% * .9);
+            }
+        }
     }
 
     .main{
