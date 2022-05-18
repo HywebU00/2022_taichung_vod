@@ -67,12 +67,12 @@ a.more {
 }
 
 // 範例：
-.demosection {
-    [class^="col"] {
-        border: 2px solid #FFF;
-        background: #DEDEDE;
-    }
-}
+// .demosection {
+//     [class^="col"] {
+//         border: 2px solid #FFF;
+//         background: #DEDEDE;
+//     }
+// }
 // 首頁輪播
 .mpSlider {
     width: 100%;
@@ -162,6 +162,13 @@ a.more {
             @include text-line(2,26px);
         }
     }
+}
+
+// 未轉YT的舊版影片，跑版修正
+#videoPlayer .container{
+    padding: 0 0 !important;
+
+    >div{ margin: auto; }
 }
 
 .mp{
@@ -315,14 +322,16 @@ a.more {
         }
         .embed-container { overflow: visible; }
         .caption{
-            position: absolute;
+            // position: absolute;
             background: #f7f8f8;
             display: block;
-            width: 90%;
-            left: 50%;
-            margin-left: -45%;
-            bottom: -80px;
+            // width: 90%;
+            // left: 50%;
+            // margin-left: -45%;
+            // bottom: -80px;
 
+            margin-top: 1em;
+            position: relative;
             // 標題上方線條
             &:before{
                 content: '';
@@ -335,10 +344,10 @@ a.more {
                 left: 1.75em;
             }
 
-            padding: 2em 1.75em 1.25em;
+            padding: 2em 1.75em 1em;
             .title{
                 padding-top: 0;
-                @include text-line(2,32px);
+                // @include text-line(2,32px);
             }
 
             opacity: 1;
@@ -347,13 +356,13 @@ a.more {
         }
         .col{
             @include gutter(6em);
-            padding-bottom: 80px;   //for caption bottom: -60px;
+            // padding-bottom: 80px;   //for caption bottom: -60px;
 
             &:hover{
-                .caption{
-                    opacity: 0;
-                    z-index: -1;
-                }
+                // .caption{
+                //     opacity: 0;
+                //     z-index: -1;
+                // }
             }
         }
     }
