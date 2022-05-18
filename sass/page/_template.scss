@@ -81,6 +81,13 @@ body {
                 padding-left: 0;
                 display: block;
             }
+
+            span{
+                &:after{
+                    width: 320px;
+                    margin-left: -72%;
+                }
+            }
         }
     }
 

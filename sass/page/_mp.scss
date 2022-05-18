@@ -165,10 +165,16 @@ a.more {
 }
 
 // 未轉YT的舊版影片，跑版修正
-#videoPlayer .container{
-    padding: 0 0 !important;
+#videoPlayer{
+    .container{
+        padding: 0 0 !important;
+        >div{ margin: auto; }
+    }
 
-    >div{ margin: auto; }
+    @include screen('mobile'){
+        height: 300px !important;
+        padding-bottom: 0 !important;
+    }
 }
 
 .mp{
