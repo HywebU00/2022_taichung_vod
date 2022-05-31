@@ -190,6 +190,32 @@
                 }
             }
         }
+
+        @include screen('mobile') {
+            >ul{
+                li{
+                    a{
+                        flex-wrap: wrap;
+
+                        &:before{
+                            left: calc(100% / 2 - 40px);
+                        }
+
+                        .col{
+                            &:first-child{
+                                flex: 1 1 100%;
+                                line-height: 3;
+                            }
+                            flex: 1 1 auto;
+                            flex-basis: 100%;
+                            max-width: 100%;
+
+                            p{ font-size: 1.125em; }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .more{
@@ -198,7 +224,7 @@
         a{
             font-size: 125%;
             letter-spacing: 1px;
-            padding: 25px 45px;
+            padding: 15px 45px;
             color: #fff;
             background: #d42a4b;
             display: inline-block;
@@ -237,9 +263,10 @@
         padding: 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
-        @include screen('mobile') {
-            @include text-overflow();
-        }
+
+        // @include screen('mobile') {
+        //     @include text-overflow();
+        // }
         a {
             @include aSetting_nocolor;
         }

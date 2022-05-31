@@ -124,10 +124,10 @@ $x_mobile_header_height: 60px;
                 content: "";
 
                 position: absolute;
-                width: 2px;
+                width: 1px;
                 height: 24px;
                 background: #fff;
-                right: 0;
+                right: -1px;
                 top: 50%;
                 margin-top: -12px;
             }
